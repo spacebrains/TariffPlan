@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif; }
+
+.container {
+  width: 1024px; }
+  @media only screen and (max-device-width: 1024px) {
+    .container {
+      width: 100%; } }
+
+.main-header {
+  height: 40px;
+  background: #5271c2;
+  color: white;
+  display: flex;
+  justify-content: center; }
+  .main-header a {
+    color: white; }
+  .main-header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .main-header .container .main-header-left {
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      .main-header .container .main-header-left h1 {
+        font-size: 24px;
+        margin: 0 15px 0 8px; }
+      .main-header .container .main-header-left .main-menu {
+        height: 100%;
+        display: flex; }
+        @media only screen and (max-device-width: 1024px) {
+          .main-header .container .main-header-left .main-menu {
+            display: none; } }
+        .main-header .container .main-header-left .main-menu li {
+          height: 100%; }
+          .main-header .container .main-header-left .main-menu li a {
+            padding: 0 5px;
+            height: 100%;
+            display: flex;
+            align-items: center; }
+            .main-header .container .main-header-left .main-menu li a:hover {
+              background: #2e3a67; }
+    .main-header .container .main-header-right {
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      @media only screen and (max-device-width: 1024px) {
+        .main-header .container .main-header-right {
+          display: none; } }
+      .main-header .container .main-header-right a {
+        margin: 5px;
+        height: 100%;
+        display: flex;
+        align-items: center; }
+        .main-header .container .main-header-right a:hover {
+          background: #2e3a67; }
+      .main-header .container .main-header-right #name-menu {
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center; }
+        .main-header .container .main-header-right #name-menu:hover {
+          background: #2e3a67; }
+        .main-header .container .main-header-right #name-menu .symbol {
+          position: relative;
+          top: 4px;
+          margin-left: 3px; }
+    .main-header .container #mobile_nav_icon {
+      border-bottom: 10px double white;
+      border-top: 3px solid white;
+      cursor: pointer;
+      float: left;
+      height: 4px;
+      margin-left: 5px;
+      margin-right: 8px;
+      margin-top: 5px;
+      transition: all 0.2s ease 0s;
+      width: 25px;
+      display: none; }
+      @media only screen and (max-device-width: 1024px) {
+        .main-header .container #mobile_nav_icon {
+          display: block; } }
+
+.create-account {
+  display: flex;
+  justify-content: center; }
+  .create-account .container {
+    margin: 20px; }
+    .create-account .container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .create-account .container form h2 {
+        font-size: 16px;
+        display: flex;
+        justify-content: center; }
+      .create-account .container form .tariff-plans {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        @media only screen and (max-device-width: 1024px) {
+          .create-account .container form .tariff-plans {
+            flex-direction: column; } }
+        .create-account .container form .tariff-plans input:checked + label .tariff-header {
+          background: #2e3a67; }
+        .create-account .container form .tariff-plans input:checked + label .tariff-footer {
+          background: #2e3a67; }
+        .create-account .container form .tariff-plans input {
+          display: none; }
+        .create-account .container form .tariff-plans label {
+          background: #fcfcfc;
+          height: 450px;
+          width: 300px;
+          margin: 15px 4% 30px 4%;
+          border-radius: 4px;
+          box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          @media only screen and (max-device-width: 1024px) {
+            .create-account .container form .tariff-plans label {
+              box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.5); } }
+          .create-account .container form .tariff-plans label:hover {
+            box-shadow: 0.4em 0.4em 5px #7a7a7a; }
+          .create-account .container form .tariff-plans label span {
+            display: flex;
+            flex-direction: column; }
+          .create-account .container form .tariff-plans label .tariff-header {
+            background: #5271c2;
+            height: 65px;
+            border-radius: 4px 4px 0 0;
+            align-items: center;
+            justify-content: center; }
+            .create-account .container form .tariff-plans label .tariff-header h3 {
+              color: white;
+              font-size: 18px;
+              margin: 5px; }
+            .create-account .container form .tariff-plans label .tariff-header .tariff-price {
+              color: #99d2f6; }
+          .create-account .container form .tariff-plans label .tariff-specifications {
+            flex-grow: 1; }
+            .create-account .container form .tariff-plans label .tariff-specifications li {
+              margin: 20px 8px;
+              border-bottom: 1px solid #d9d9d9; }
+          .create-account .container form .tariff-plans label .tariff-footer {
+            align-items: center;
+            height: 65px;
+            background: #5271c2;
+            color: white;
+            border-radius: 0 0 4px 4px;
+            display: flex;
+            justify-content: center; }
+      .create-account .container form .data-create {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        .create-account .container form .data-create .container {
+          display: flex;
+          justify-content: center; }
+          @media only screen and (max-device-width: 1024px) {
+            .create-account .container form .data-create .container {
+              flex-direction: column; } }
+        .create-account .container form .data-create .container div {
+          margin: 20px;
+          width: 100%; }
+          @media only screen and (max-device-width: 1024px) {
+            .create-account .container form .data-create .container div {
+              margin: 0; } }
+        .create-account .container form .data-create .input-container {
+          height: 65px;
+          width: 100%;
+          margin: 10px 0;
+          background: #eee;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .create-account .container form .data-create .input-container .input {
+            width: 80%;
+            height: 20px;
+            background: #eee;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            /*font*/
+            font-family: 'Ubuntu-Bold', sans-serif;
+            font-size: 20px;
+            color: #30265d; }
+          .create-account .container form .data-create .input-container .input::-webkit-input-placeholder {
+            font-family: 'Ubuntu-Regular', sans-serif;
+            font-size: 18px;
+            color: #999; }
+          .create-account .container form .data-create .input-container .input:-moz-placeholder {
+            font-family: 'Ubuntu-Regular', sans-serif;
+            font-size: 18px;
+            color: #999; }
+      .create-account .container form .submit {
+        width: 25%;
+        height: 60px;
+        background: #5271c2;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        left: -7.5%;
+        font-family: 'Ubuntu-Bold', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        align-self: flex-end; }
+        @media only screen and (max-device-width: 1024px) {
+          .create-account .container form .submit {
+            left: 0;
+            width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

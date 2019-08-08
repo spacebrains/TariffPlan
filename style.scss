@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+$main-color: #5271c2;
+$light-font-color: white;
+$dark-main-color: #2e3a67;
+$light-main-color: #99d2f6;
+$light-bag: #fcfcfc;
+$border-list-color: #d9d9d9;
+//716ff3
+$brad:4px;
+$c1:1024px;
+$c2:900px;
+
+*{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+  width:$c1;
+  @media only screen and (max-device-width: $c1) {
+    width:100%;
+  }
+}
+
+.main-header{
+  height: 40px;
+  background: $main-color;
+  color: $light-font-color;
+  //flex
+  display: flex;
+  justify-content: center;
+  //child
+  a{
+    color: $light-font-color;
+  }
+
+  .container{
+    height:100%;
+    //flex
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .main-header-left{
+      height:100%;
+      //flex
+      display:flex;
+      align-items: center;
+
+      h1 {
+        font-size:24px;
+        margin:0 15px 0 8px;
+      }
+
+      .main-menu{
+        height:100%;
+        //flex
+        display:flex;
+        @media only screen and (max-device-width: $c1) {
+          display:none;
+        }
+
+        li {
+          height:100%;
+          a {
+            padding:0 5px;
+            height: 100%;
+            display:flex;
+            align-items: center;
+
+            &:hover {
+              background: $dark-main-color;
+            }
+          }
+        }
+      }
+    }
+
+    .main-header-right{
+      height:100%;
+      //flex
+      display:flex;
+      align-items: center;
+      @media only screen and (max-device-width: $c1) {
+        display:none;
+      }
+
+      a{
+        margin:5px;
+        height:100%;
+        //flex
+        display:flex;
+        align-items: center;
+        &:hover{ background: $dark-main-color}
+      }
+
+      #name-menu{
+        cursor:pointer;
+        height:100%;
+        //flex
+        display:flex;
+        align-items: center;
+
+        &:hover{
+          background: $dark-main-color;
+        }
+        .symbol{
+          position: relative;
+          top:4px;
+          margin-left:3px;
+        }
+      }
+    }
+
+    #mobile_nav_icon {
+      border-bottom: 10px double $light-font-color;
+      border-top: 3px solid $light-font-color;
+      cursor: pointer;
+      float: left;
+      height: 4px;
+      margin-left: 5px;
+      margin-right:8px;
+      margin-top: 5px;
+      transition: all 0.2s ease 0s;
+      width: 25px;
+      display:none;
+
+      @media only screen and (max-device-width: $c1) {
+        display:block;
+      }
+    }
+  }
+}
+
+.create-account{
+  //flex{
+  display:flex;
+  justify-content: center;
+  //}
+  .container {
+    margin:20px;
+
+    form {
+      //flex{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      //}
+      h2{
+        font-size:16px;
+        //flex{
+        display:flex;
+        justify-content: center;
+        //}
+      }
+      .tariff-plans{
+        width:100%;
+        //flex{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        //}
+        @media only screen and (max-device-width: $c1) {
+          flex-direction: column;
+        }
+
+          input:checked + label .tariff-header{
+          background: $dark-main-color;
+        }
+        input:checked + label .tariff-footer{
+          background: $dark-main-color;
+        }
+        input{display:none} //!
+
+        label{
+          background: $light-bag;
+          height:450px;
+          width:300px;
+          margin:15px 4% 30px 4%;
+          border-radius: $brad;
+          box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+          cursor:pointer;
+          //flex{
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+          //}
+          @media only screen and (max-device-width: $c1) {
+            box-shadow: 1px 1px 1px 1px rgba(122,122,122,0.5);
+          }
+          &:hover{
+            box-shadow: 0.4em 0.4em 5px rgba(122,122,122,1);
+          }
+          span{
+            //flex{
+            display:flex;
+            flex-direction: column;
+            //}
+          }
+
+          .tariff-header{
+            background: $main-color;
+            height:65px;
+            border-radius:$brad $brad 0 0;
+            //flex{
+            align-items: center;
+            justify-content: center;
+            //}
+
+            h3{
+              color: $light-font-color;
+              font-size:18px;
+              margin:5px;
+            }
+
+            .tariff-price{
+              color:$light-main-color;
+            }
+          }
+
+          .tariff-specifications{
+            flex-grow: 1;
+            li{
+              margin: 20px 8px;
+              border-bottom:1px solid $border-list-color;
+            }
+          }
+
+          .tariff-footer{
+            align-items: center;
+            height:65px;
+            background: $main-color;
+            color:$light-font-color;
+            border-radius:0 0 $brad $brad;
+            //flex{
+            display:flex;
+            justify-content: center;
+            //}
+          }
+        }
+      }
+
+      .data-create{
+        width:100%;
+        //flex{
+        display:flex;
+        justify-content: center;
+        //}
+        .container{
+          //flex{
+          display:flex;
+          justify-content: center;
+          //}
+          @media only screen and (max-device-width: $c1) {
+            flex-direction: column;
+          }
+        }
+
+        .container div{
+          margin:20px;
+          width:100%;
+          @media only screen and (max-device-width: $c1) {
+            margin:0;
+          }
+
+        }
+        .input-container{
+          height:65px;
+          width:100%;
+          margin:10px 0;
+          background: #eee;
+          border:none;
+          border-radius: 3px;
+          cursor: pointer;
+          //flex{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          //}
+
+          .input{
+            width:80%;
+            height:20px;
+            background: #eee;
+            border:none;
+            outline: none;
+            cursor:pointer;
+            /*font*/
+            font-family: 'Ubuntu-Bold', sans-serif;
+            font-size: 20px;
+            color:#30265d;
+          }
+          .input::-webkit-input-placeholder {
+            font-family: 'Ubuntu-Regular', sans-serif;
+            font-size: 18px;
+            color:#999;
+          }
+          .input:-moz-placeholder {
+            font-family: 'Ubuntu-Regular', sans-serif;
+            font-size: 18px;
+            color:#999;
+          }
+        }
+      }
+
+      .submit {
+        width: 25%;
+        height: 60px;
+        background: $main-color;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        left:-7.5%;
+        //font{
+        font-family: 'Ubuntu-Bold', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        //}
+        //flex{
+        align-self: flex-end;
+        //}
+        @media only screen and (max-device-width: $c1) {
+          left:0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
